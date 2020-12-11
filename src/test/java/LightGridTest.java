@@ -27,7 +27,6 @@ public class LightGridTest {
     }
 
     @Test
-    @Disabled
     void should_open_all_light_success() {
         Coordinate start = new Coordinate(0, 0);
         Coordinate end = new Coordinate(999, 999);
