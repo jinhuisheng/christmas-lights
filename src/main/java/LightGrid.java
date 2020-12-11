@@ -9,8 +9,8 @@ public class LightGrid {
 
     public LightGrid(int x, int y) {
         lights = new Light[x][y];
-        for (int i = 0; i < 1000; i++) {
-            for (int j = 0; j < 1000; j++) {
+        for (int i = 0; i < x; i++) {
+            for (int j = 0; j < y; j++) {
                 lights[i][j] = new Light();
             }
         }
