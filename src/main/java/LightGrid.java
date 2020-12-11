@@ -21,7 +21,7 @@ public class LightGrid {
     public void turnOn(CoordinatePairs coordinatePairs) {
         Coordinate start = coordinatePairs.getStartCoordinate();
         Coordinate end = coordinatePairs.getEndCoordinate();
-        for (int i = start.getX(); i < 1000; i++) {
+        for (int i = start.getX(); i < end.getX(); i++) {
             for (int j = 0; j < 1000; j++) {
                 lights[i][j].on();
             }
