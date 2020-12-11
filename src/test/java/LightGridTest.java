@@ -8,7 +8,8 @@ public class LightGridTest {
     @Test
     void should_open_all_light_success() {
         LightGrid lightGrid = new LightGrid();
-        Coordinate coordinate = new Coordinate(0, 0);
-        CoordinatePairs coordinatePairs = new CoordinatePairs();
+        Coordinate start = new Coordinate(0, 0);
+        Coordinate end = new Coordinate(999, 999);
+        CoordinatePairs coordinatePairs = new CoordinatePairs(start,end);
     }
 }
