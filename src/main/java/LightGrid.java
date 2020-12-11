@@ -32,4 +32,8 @@ public class LightGrid {
     public Light getLight(int i, int j) {
         return lights[i][j];
     }
+
+    public void toggle(CoordinatePairs coordinatePairs) {
+
+    }
 }
