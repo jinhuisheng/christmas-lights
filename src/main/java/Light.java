@@ -6,4 +6,5 @@ public class Light {
     public boolean isOpen() {
         return true;
     }
+
 }
