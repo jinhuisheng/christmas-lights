@@ -35,4 +35,17 @@ public class LightGrid {
 
     public void toggle(CoordinatePairs coordinatePairs) {
     }
+
+    public void turnOff(CoordinatePairs coordinatePairs) {
+
+        Coordinate start = coordinatePairs.getStartCoordinate();
+        Coordinate end = coordinatePairs.getEndCoordinate();
+        for (int i = start.getX(); i < end.getX(); i++) {
+            for (int j = start.getY(); j < end.getY(); j++) {
+                lights[i][j].off();
+            }
+        }
+
+
+    }
 }

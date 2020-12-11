@@ -12,4 +12,8 @@ public class Light {
     public void on() {
         this.isOpen = true;
     }
+
+    public void off() {
+        this.isOpen = false;
+    }
 }
