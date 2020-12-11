@@ -59,7 +59,6 @@ public class LightGridTest {
 
 
     @Test
-    @Disabled
     void should_switch_all_light_to_close_from_0_to_999_on_x_position_success() {
         Coordinate start = new Coordinate(0, 0);
         Coordinate end = new Coordinate(999, 0);
