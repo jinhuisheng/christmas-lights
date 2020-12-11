@@ -77,9 +77,14 @@ public class LightGridTest {
 
         lightGrid.toggle(coordinatePairs);
 
-//        for (int i = 0; i < 1000; i++) {
-//            assertThat(lightGrid.getLight(i, j).isOpen()).isEqualTo(false);
-//        }
+        for (int i = 0; i < 1000; i++) {
+            Light currentLight = lightGrid.getLight(i, j);
+            if (i % 2 == 0) {
+                assertThat(currentLight.isOpen()).isEqualTo(true);
+            } else {
+                assertThat(currentLight.isOpen()).isEqualTo(false);
+            }
+        }
     }
 
 

@@ -20,4 +20,8 @@ public class Light {
     public void off() {
         this.isOpen = false;
     }
+
+    public void toggle() {
+        this.isOpen = !this.isOpen;
+    }
 }
