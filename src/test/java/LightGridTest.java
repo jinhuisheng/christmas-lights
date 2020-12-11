@@ -12,5 +12,7 @@ public class LightGridTest {
         Coordinate end = new Coordinate(999, 999);
         CoordinatePairs coordinatePairs = new CoordinatePairs(start, end);
         lightGrid.turnOn(coordinatePairs);
+
+        fo
     }
 }
