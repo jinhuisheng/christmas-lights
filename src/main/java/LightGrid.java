@@ -23,6 +23,6 @@ public class LightGrid {
     }
 
     public Light getLight(int i, int j) {
-        return new Light();
+        return lights[i][j];
     }
 }
