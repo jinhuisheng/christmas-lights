@@ -19,16 +19,15 @@ public class LightGridTest {
 
     @Test
     @Disabled
-    void should_open_all_light_from_0_to_999_on_x_position_success() {
+    void should_all_light_is_close_default_from_0_to_999_on_x_position_success() {
         Coordinate start = new Coordinate(0, 0);
         Coordinate end = new Coordinate(999, 0);
         CoordinatePairs coordinatePairs = new CoordinatePairs(start, end);
 
-        lightGrid.turnOn(coordinatePairs);
-
-        int j = 0;
         for (int i = 0; i < 1000; i++) {
-            assertThat(lightGrid.getLight(i, j).isOpen()).isEqualTo(true);
+            for (int j = 0; j < 1000; j++) {
+                assertThat(lightGrid.getLight(i, j).isOpen()).isEqualTo(true);
+            }
         }
     }
 
