@@ -11,4 +11,12 @@ public class CoordinatePairs {
         this.start = start;
         this.end = end;
     }
+
+    public Coordinate getStartCoordinate() {
+        return start;
+    }
+
+    public Coordinate getEndCoordinate() {
+        return end;
+    }
 }
