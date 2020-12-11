@@ -22,7 +22,7 @@ public class LightGrid {
         Coordinate start = coordinatePairs.getStartCoordinate();
         Coordinate end = coordinatePairs.getEndCoordinate();
         for (int i = start.getX(); i < end.getX(); i++) {
-            for (int j = 0; j < 1000; j++) {
+            for (int j = start.getY(); j < end.getY(); j++) {
                 lights[i][j].on();
             }
         }
