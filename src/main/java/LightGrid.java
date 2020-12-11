@@ -34,6 +34,5 @@ public class LightGrid {
     }
 
     public void toggle(CoordinatePairs coordinatePairs) {
-
     }
 }
