@@ -3,6 +3,7 @@ import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.byLessThan;
 
 /**
  * @author huisheng.jin
@@ -63,14 +64,22 @@ public class LightGridTest {
         Coordinate start = new Coordinate(0, 0);
         Coordinate end = new Coordinate(999, 0);
         CoordinatePairs coordinatePairs = new CoordinatePairs(start, end);
-        lightGrid.turnOn(coordinatePairs);
-
-        lightGrid.toggle(coordinatePairs);
 
         int j = 0;
         for (int i = 0; i < 1000; i++) {
-            assertThat(lightGrid.getLight(i, j).isOpen()).isEqualTo(false);
+            Light currentLight = lightGrid.getLight(i, j);
+            if (i % 2 == 0) {
+                currentLight.off();
+            } else {
+                currentLight.on();
+            }
         }
+
+        lightGrid.toggle(coordinatePairs);
+
+//        for (int i = 0; i < 1000; i++) {
+//            assertThat(lightGrid.getLight(i, j).isOpen()).isEqualTo(false);
+//        }
     }
 
 
