@@ -18,7 +18,6 @@ public class LightGridTest {
     }
 
     @Test
-    @Disabled
     void should_all_light_is_close_default_from_0_to_999_on_x_position_success() {
         for (int i = 0; i < 1000; i++) {
             for (int j = 0; j < 1000; j++) {

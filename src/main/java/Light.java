@@ -5,8 +5,12 @@
 public class Light {
     private Boolean isOpen;
 
+    public Light() {
+        isOpen = false;
+    }
+
     public boolean isOpen() {
-        return true;
+        return isOpen;
     }
 
     public void on() {
