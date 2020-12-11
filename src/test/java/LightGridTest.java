@@ -1,4 +1,5 @@
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -82,6 +83,28 @@ public class LightGridTest {
                 assertThat(currentLight.isOpen()).isEqualTo(false);
             }
         }
+    }
+
+    @Test
+    void xxx() {
+        Coordinate start = new Coordinate(499, 499);
+        Coordinate end = new Coordinate(500, 500);
+        CoordinatePairs coordinatePairs = new CoordinatePairs(start, end);
+
+        for (int i = 499; i <= 500; i++) {
+            for (int j = 499; j < 500; j++) {
+                lightGrid.getLight(i, j).on();
+            }
+        }
+
+        lightGrid.turnOff(coordinatePairs);
+
+        for (int i = 499; i <= 500; i++) {
+            for (int j = 499; j < 500; j++) {
+                assertThat(lightGrid.getLight(i, j).isOpen()).isEqualTo(false);
+            }
+        }
+
     }
 
 
