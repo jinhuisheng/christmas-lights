@@ -18,6 +18,7 @@ public class LightGridTest {
     }
 
     @Test
+    @Disabled
     void should_open_all_light_success() {
         Coordinate start = new Coordinate(0, 0);
         Coordinate end = new Coordinate(999, 999);
@@ -33,6 +34,7 @@ public class LightGridTest {
     }
 
     @Test
+    @Disabled
     void should_open_all_light_from_0_to_999_on_x_position_success() {
         Coordinate start = new Coordinate(0, 0);
         Coordinate end = new Coordinate(999, 0);
