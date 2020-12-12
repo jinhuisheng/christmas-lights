@@ -66,28 +66,19 @@ public class LightGridTest {
     @Test
     @Disabled
     void should_switch_all_light_to_close_from_0_to_999_on_x_position_success() {
-        Coordinate start = new Coordinate(0, 0);
-        Coordinate end = new Coordinate(999, 0);
+        Coordinate start = new Coordinate(0, 999);
+        Coordinate end = new Coordinate(0, 999);
         CoordinatePairs coordinatePairs = new CoordinatePairs(start, end);
-
-        int j = 0;
-        for (int i = 0; i < 1000; i++) {
-            Light currentLight = lightGrid.getLight(i, j);
-            if (i % 2 != 0) {
-                currentLight.on();
-            }
-        }
 
         lightGrid.toggle(coordinatePairs);
 
+        int totalBrightness = 0;
         for (int i = 0; i < 1000; i++) {
-            Light currentLight = lightGrid.getLight(i, j);
-            if (i % 2 == 0) {
-                assertThat(currentLight.isOpen()).isEqualTo(true);
-            } else {
-                assertThat(currentLight.isOpen()).isEqualTo(false);
+            for (int j = 0; j < 1000; j++) {
+                totalBrightness += lightGrid.getLight(i, j).getBrightness();
             }
         }
+        assertThat(totalBrightness).isEqualTo(2000000);
     }
 
     @Test
