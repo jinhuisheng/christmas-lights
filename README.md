@@ -46,6 +46,7 @@
 灯光网格（light grid)
 坐标对(coordinate pairs)
 灯 （light）
+亮度 （brightness）
 
 ### 动词
 打开(turn on)
@@ -53,3 +54,6 @@
 切换（toggle)
 
 
+## kata地址
+https://kata-log.rocks/christmas-lights-kata
+https://ynfeng.github.io/2019/11/29/ChristmasLightsKata/    
