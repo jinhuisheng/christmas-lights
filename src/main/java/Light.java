@@ -4,9 +4,11 @@
  */
 public class Light {
     private Boolean isOpen;
+    private Integer brightness;
 
     public Light() {
         isOpen = false;
+        brightness = 0;
     }
 
     public boolean isOpen() {
