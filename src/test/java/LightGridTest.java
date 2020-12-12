@@ -19,11 +19,14 @@ public class LightGridTest {
 
     @Test
     void should_all_light_is_close_default_from_0_to_999_on_x_position_success() {
+        int totalBrightness = 0;
         for (int i = 0; i < 1000; i++) {
             for (int j = 0; j < 1000; j++) {
                 assertThat(lightGrid.getLight(i, j).isOpen()).isEqualTo(false);
+                totalBrightness += lightGrid.getLight(i, j).getBrightness();
             }
         }
+        assertThat(totalBrightness).isEqualTo(0);
     }
 
     @Test

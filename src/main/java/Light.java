@@ -26,4 +26,8 @@ public class Light {
     public void toggle() {
         brightness += 2;
     }
+
+    public int getBrightness() {
+        return brightness;
+    }
 }
