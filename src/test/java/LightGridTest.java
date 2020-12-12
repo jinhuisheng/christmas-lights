@@ -66,9 +66,7 @@ public class LightGridTest {
         int j = 0;
         for (int i = 0; i < 1000; i++) {
             Light currentLight = lightGrid.getLight(i, j);
-            if (i % 2 == 0) {
-                currentLight.off();
-            } else {
+            if (i % 2 != 0) {
                 currentLight.on();
             }
         }
