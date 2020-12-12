@@ -37,11 +37,14 @@ public class LightGridTest {
 
         lightGrid.turnOn(coordinatePairs);
 
+        int totalBrightness = 0;
         for (int i = 0; i < 1000; i++) {
             for (int j = 0; j < 1000; j++) {
                 assertThat(lightGrid.getLight(i, j).isOpen()).isEqualTo(true);
+                totalBrightness += lightGrid.getLight(i, j).getBrightness();
             }
         }
+        assertThat(totalBrightness).isEqualTo(1000000);
     }
 
     @Test
