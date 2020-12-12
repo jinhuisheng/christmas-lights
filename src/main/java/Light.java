@@ -12,18 +12,23 @@ public class Light {
     }
 
     public boolean isOpen() {
-        return isOpen;
+        return brightness > 0;
     }
 
     public void on() {
+        brightness += 1;
         this.isOpen = true;
     }
 
     public void off() {
+        if (brightness > 0) {
+            brightness -= 1;
+        }
         this.isOpen = false;
     }
 
     public void toggle() {
+        brightness += 2;
         this.isOpen = !this.isOpen;
     }
 }
