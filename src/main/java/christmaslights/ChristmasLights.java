@@ -1,7 +1,6 @@
 package christmaslights;
 
 public class ChristmasLights {
-
     private LightGrid lightGrid;
 
     public ChristmasLights(int x, int y) {
@@ -13,15 +12,15 @@ public class ChristmasLights {
     }
 
 
-    public void turnOn(Coordinator start, Coordinator end) {
-        lightGrid.operate(start, end, Light::turnOn);
+    public void turnOn(CoordinatePair coordinatePair) {
+        lightGrid.operate(coordinatePair, Light::turnOn);
     }
 
-    public void toggle(Coordinator start, Coordinator end) {
-        lightGrid.operate(start, end, Light::toggle);
+    public void toggle(CoordinatePair coordinatePair) {
+        lightGrid.operate(coordinatePair, Light::toggle);
     }
 
-    public void turnOff(Coordinator start, Coordinator end) {
-        lightGrid.operate(start, end, Light::turnOff);
+    public void turnOff(CoordinatePair coordinatePair) {
+        lightGrid.operate(coordinatePair, Light::turnOff);
     }
 }

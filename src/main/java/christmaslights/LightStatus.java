@@ -1,5 +1,5 @@
 package christmaslights;
 
-public enum  LightStatus {
+public enum LightStatus {
     OPEN, CLOSE
 }

@@ -55,7 +55,7 @@
 圣诞灯 (christmas-lights)
 灯光网格（light grid)
 坐标对(coordinate pairs)
-灯 （light）
+灯 （light） 状态（Open，Close)
 亮度 （brightness）
 
 ### 动词

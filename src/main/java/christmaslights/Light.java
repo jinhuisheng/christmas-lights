@@ -3,6 +3,7 @@ package christmaslights;
 import static christmaslights.LightStatus.*;
 
 public class Light {
+
     private LightStatus status;
 
     public Light() {
@@ -12,6 +13,7 @@ public class Light {
     public LightStatus getStatus() {
         return status;
     }
+
 
     public void turnOn() {
         status = OPEN;
