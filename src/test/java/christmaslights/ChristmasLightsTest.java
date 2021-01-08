@@ -54,6 +54,24 @@ public class ChristmasLightsTest {
         assertLights(lightStatuses, CLOSE);
     }
 
+    @Test
+    void strong_test() {
+        ChristmasLights christmasLights = new ChristmasLights(1000, 1000);
+        christmasLights.turnOn(new CoordinatePair(new Coordinate(0, 0), new Coordinate(999, 999)));
+        christmasLights.toggle(new CoordinatePair(new Coordinate(0, 0), new Coordinate(999, 0)));
+        christmasLights.turnOff(new CoordinatePair(new Coordinate(499, 499), new Coordinate(500, 500)));
+        LightStatus[][] lightStatuses = christmasLights.getLightStatuses();
+        assertThat(lightStatuses[499][499]).isEqualTo(CLOSE);
+        assertThat(lightStatuses[499][500]).isEqualTo(CLOSE);
+        assertThat(lightStatuses[500][499]).isEqualTo(CLOSE);
+        assertThat(lightStatuses[500][500]).isEqualTo(CLOSE);
+        assertThat(lightStatuses[498][498]).isEqualTo(OPEN);
+        assertThat(lightStatuses[1][0]).isEqualTo(CLOSE);
+        assertThat(lightStatuses[0][1]).isEqualTo(OPEN);
+
+
+    }
+
     private void assertLights(LightStatus[][] lightStatuses, LightStatus close) {
         for (int i = 0; i < 10; i++) {
             for (int j = 0; j < 10; j++) {
