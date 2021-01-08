@@ -2,26 +2,26 @@ package christmaslights;
 
 public class ChristmasLights {
 
-    private final LightGrid lightGrid;
+    private LightGrid lightGrid;
 
-    public ChristmasLights(int length, int width) {
-        lightGrid = new LightGrid(length, width);
+    public ChristmasLights(int x, int y) {
+        lightGrid = new LightGrid(x, y);
     }
 
-    public Integer[][] getBrightnesses() {
-        return lightGrid.getBrightnesses();
+    public LightStatus[][] getLightStatuses() {
+        return lightGrid.getLightStatuses();
     }
 
-    public void turnOn(Coordinate start, Coordinate end) {
+
+    public void turnOn(Coordinator start, Coordinator end) {
         lightGrid.operate(start, end, Light::turnOn);
     }
 
-    public void toggle(Coordinate start, Coordinate end) {
+    public void toggle(Coordinator start, Coordinator end) {
         lightGrid.operate(start, end, Light::toggle);
     }
 
-    public void turnOff(Coordinate start, Coordinate end) {
+    public void turnOff(Coordinator start, Coordinator end) {
         lightGrid.operate(start, end, Light::turnOff);
     }
-
 }

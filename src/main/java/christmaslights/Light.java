@@ -1,28 +1,27 @@
 package christmaslights;
 
+import static christmaslights.LightStatus.*;
 
 public class Light {
-    private Integer brightness;
+    private LightStatus status;
 
     public Light() {
-        brightness = 0;
+        status = CLOSE;
+    }
+
+    public LightStatus getStatus() {
+        return status;
     }
 
     public void turnOn() {
-        brightness += 1;
+        status = OPEN;
     }
 
     public void toggle() {
-        brightness += 2;
+        status = status == OPEN ? CLOSE : OPEN;
     }
 
     public void turnOff() {
-        if (brightness > 0) {
-            brightness -= 1;
-        }
-    }
-
-    public Integer getBrightness() {
-        return brightness;
+        status = CLOSE;
     }
 }

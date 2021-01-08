@@ -1,10 +1,10 @@
 package christmaslights;
 
-public class Coordinate {
+public class Coordinator {
     private final int x;
     private final int y;
 
-    public Coordinate(int x, int y) {
+    public Coordinator(int x, int y) {
         this.x = x;
         this.y = y;
     }
